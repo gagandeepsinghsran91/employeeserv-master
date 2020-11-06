@@ -45,8 +45,12 @@ public class EmployeeConverter implements Converter<Employee, EmployeeEntity>{
 			employee.setLastName(v.getLastName());
 			employee.setAddress(addressConverter.convertToView(v.getAddress()));
 			employee.setDateOfBirth(this.getDateOfBirth(v.getDateOfBirth()));
+			
+			if(v.getId()!=null) {
+				employee.setId(v.getId().intValue());
+			}
 			return employee;
-			//employeeEntity.setDateOfBirth(dateOfBirth);
+			
 		}
 		return null;
 	}

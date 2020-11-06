@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "74d18046-6e66-4460-9dd7-92d04806dcb7",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreateEmployee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"first_name\": \"GAGAN\",\n    \"last_name\": \"SRAN\",\n    \"address\": {\n        \"line1\":\"5740 Plano Dr.\",\n        \"line2\": null,\n        \"city\": \"PLANO\",\n        \"state\": \"TX\",\n        \"country\": \"USA\",\n        \"zip_code\": \"75035\"\n        \n    },\n    \"date_of_birth\": {\n            \"year\": 1920,\n            \"month\": 1,\n            \"date\": 16\n        }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/bfs/employees/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"bfs",
+						"employees",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/v1/bfs/employees/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/bfs/employees/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"bfs",
+						"employees",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

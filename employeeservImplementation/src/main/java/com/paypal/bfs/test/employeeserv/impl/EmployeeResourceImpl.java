@@ -37,7 +37,7 @@ public class EmployeeResourceImpl implements EmployeeResource {
     public ResponseEntity<Employee> createEmployee(@RequestBody @Valid Employee employee){
     	
     	
-    	if(!employeeRepository.findById(Long.valueOf(employee.getId())).isPresent()) {
+    	if(employee.getId()==null ||!employeeRepository.findById(Long.valueOf(employee.getId())).isPresent()) {
     
     		Employee employeeView =  employeeConverter.convertToView(employeeRepository.save(employeeConverter.convertToEntity(employee)));
     		 return new ResponseEntity<>(employeeView, HttpStatus.CREATED); 
