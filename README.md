@@ -18,6 +18,7 @@ There are three modules in this application
 - Use command `mvn clean install` to build the project.
 - Use command `mvn spring-boot:run` from `employeeservImplementation` folder to run the project.
 - Use postman or curl to access `http://localhost:8080/v1/bfs/employees/1` GET endpoint. It will return an Employee resource.
+- Added Postamn collection for test at path src/test/resources
 
 ## Assignment
 We would like you to enhance the existing project and see you complete the following requirements:
